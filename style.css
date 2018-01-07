@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+/*APP*/
+.app {
+		
+}
+/*CONTACT FORM*/
+.contactForm {
+	background: yellow;	
+	width: 90%;
+	max-width: 1000px;
+	margin: 10px auto;
+	padding: 60px 40px 20px;
+	background: #EEE;
+	text-align: center;
+
+}
+.contactForm input {
+	margin-left: 10px;
+	min-width: 200px;
+	height: 30px;
+	border-radius: 2px;
+}
+
+.contactForm button {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	background: #ccc;
+	color: deeppink;
+	font-weight: bold;
+	display: block;
+	margin: 30px auto 0;
+	width: 150px;
+	height: 50px;
+	border-radius: 5px;
+}
+
+/*CONTACTS*/
+.contactsList {
+	background: #EEE;
+	padding: 20px  0;	
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+	margin-top: 20px;
+
+}
+
+/*CONTACT*/
+
+.contactItem {
+	background: #ccc;
+	margin: 10px auto;
+	width: 80%;
+	padding: 40px;
+}
+
+.contactItem:before, .contactItem:after {
+	content: "";
+  	display: table;
+  	clear: both;
+} 
+
+
+
+.contactImage {
+	width: 100px;
+	float: left;
+	
+
+}
+
+.contactLabel {
+	margin-left: 150px;
+	color:#fff;
+	font-weight: bold;
+	text-shadow: 2px 2px 5px black;
+
+}
+
+.contactEmail {
+	margin-left: 50px;
+	color: deeppink;
+}
+
+
