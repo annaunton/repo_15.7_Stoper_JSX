@@ -1,9 +1,35 @@
 var Counter = React.createClass({
 
-    propTypes: {
-        item: React.PropTypes.object.isRequired,
+    /*getDefaultProps: function() {
+        console.log();
     },
 
+    ComponentWillMount: function() {
+
+
+    },
+
+    componentWillReceiveProps: function() {
+
+    },
+
+    shouldComponentUpdate: function() {
+      
+    },
+
+    componentWillUpdate: function() {
+
+    },
+
+    componentDidUpdate: function() {
+
+    },
+
+    componentWillUnmount: function() {
+
+    },
+    */
+ 
     getInitialState: function() {
         return {
             counter: 0
@@ -16,14 +42,75 @@ var Counter = React.createClass({
         });
     },
 
-
-
     render: function() {
-        return React.createElement('div', {onClick: this.increment, className: 'button'},
+        return React.createElement('div', {onClick: this.increment, className: 'button increment1'},
             React.createElement('span', {}, 'Licznik ' + this.state.counter)
         );
     }
 });
 
-var element = React.createElement(Counter);
-ReactDOM.render(element, document.getElementById('app'));
+
+var Counter2 = React.createClass({
+
+
+    getInitialState: function() {
+        return {
+            counter: 0
+        };
+    },
+
+    decrement: function() {
+        this.setState({
+            counter: this.state.counter - 1
+        });
+    },
+
+
+    render: function() {
+        return React.createElement('div', {onClick: this.decrement, className: 'button decrement'},
+            React.createElement('span', {}, 'Licznik ' + this.state.counter)
+        );
+    }
+});
+
+var Counter3 = React.createClass({
+
+
+    getInitialState: function() {
+        return {
+            counter: 0
+        };
+    },
+
+    increment: function() {
+        this.setState({
+            counter: this.state.counter +1
+        });
+    },
+
+
+    render: function() {
+        return React.createElement('div', {onClick: this.increment, className: 'button increment2'},
+            React.createElement('span', {}, 'Licznik ' + this.state.counter)
+        );
+    }
+});
+
+
+var App = React.createClass({
+  render: function() {
+    return (
+      React.createElement('div', {},
+        React.createElement(Counter, {}),
+        React.createElement(Counter2, {}),
+        React.createElement(Counter3, {}),
+      )
+    );
+  }
+});
+
+var app = React.createElement(App);
+ReactDOM.render(app, document.getElementById('app'));
+
+
+

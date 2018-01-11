@@ -1,5 +1,18 @@
 .button {
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	text-align: center;
+	line-height: 100px;
+	margin-left: 20px;
+}
+
+.increment1 {
 	background: green;
-	width: 200px;
-	height: 200px;
+}
+.decrement {
+	background: yellow;
+}
+.increment2 {
+	background: pink;
 }
