@@ -1,2 +1,29 @@
-var app = React.createElement(App);
-ReactDOM.render(app, document.getElementById('app'));
+var Counter = React.createClass({
+
+    propTypes: {
+        item: React.PropTypes.object.isRequired,
+    },
+
+    getInitialState: function() {
+        return {
+            counter: 0
+        };
+    },
+
+    increment: function() {
+        this.setState({
+            counter: this.state.counter + 1
+        });
+    },
+
+
+
+    render: function() {
+        return React.createElement('div', {onClick: this.increment, className: 'button'},
+            React.createElement('span', {}, 'Licznik ' + this.state.counter)
+        );
+    }
+});
+
+var element = React.createElement(Counter);
+ReactDOM.render(element, document.getElementById('app'));
