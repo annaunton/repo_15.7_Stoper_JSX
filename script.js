@@ -1,38 +1,39 @@
 var Counter = React.createClass({
 
     getDefaultProps: function() {
-        console.log(Ustawia domyślne wartości propsów, które nie zostały przekazane do komponentu. Może np. przy formularzach, jeżeli jakies pole nie zostanie wypełnione);
+        console.log('Ustawia domyślne wartości propsów, które nie zostały przekazane do komponentu. Może np. przy formularzach, jeżeli jakies pole nie zostanie wypełnione');
     },
 
     ComponentWillMount: function() {
-        console.log(Wykonywana zaraz przed wykonaniem metody render);
+        console.log('Wykonywana zaraz przed wykonaniem metody render');
 
     },
 
     ComponentDidMount: function() {
-        console.log(Jak tylko metoda render zostanie wywołana, od razu wywoływana jest metoda componentDidMount. W chwili wykonywania tej metody, nasz komponent widnieje już na stronie (jest zamontowany w drzewie DOM). Możemy wykonywać na nim różne operacje manipulacji, używać jQuery albo też pobrać dane. );
+        console.log('Jak tylko metoda render zostanie wywołana, od razu wywoływana jest metoda componentDidMount. W chwili wykonywania tej metody, nasz komponent widnieje już na stronie (jest zamontowany w drzewie DOM). Możemy wykonywać na nim różne operacje manipulacji, używać jQuery albo też pobrać dane.');
 
     },
 
     componentWillReceiveProps: function() {
-        consolelog(Metoda zostanie wywołana tylko wtedy, gdy komponent otrzyma nowe właściwości, pozwala aktualizować stan na podstawie nadchodzących właściwości. Może np. przy updatowaniu formularza);
+        consolelog('Metoda zostanie wywołana tylko wtedy, gdy komponent otrzyma nowe właściwości, pozwala aktualizować stan na podstawie nadchodzących właściwości. Może np. przy updatowaniu formularza');
     },
 
     shouldComponentUpdate: function() {
-        console.log(Metoda ta jest wywoływana tuż przed wywołaniem metody render i pozwala sprawdzić czy faktycznie trzeba jeszcze raz przerysować komponent. Zwracana jest tutaj wartość true/false, czyli typ boolean. Metodę tę można zastosować, kiedy zależy nam na optymalizacji działania komponentu. Albo np. do sprawdzenia czy dysponujemy aktualnymi danymi);
+        console.log('Metoda ta jest wywoływana tuż przed wywołaniem metody render i pozwala sprawdzić czy faktycznie trzeba jeszcze raz przerysować komponent. Zwracana jest tutaj wartość true/false, czyli typ boolean. Metodę tę można zastosować, kiedy zależy nam na optymalizacji działania komponentu. Albo np. do sprawdzenia czy dysponujemy aktualnymi danymi');
+        return true;
     },
 
     componentWillUpdate: function() {
-        console.log(Metoda shouldComponentUpdate zwróci wartość true, to natychmiast zostanie wywołana kolejna metoda - componentWillUpdate. Powinna zostać wywoływana tylko do przygotowania na nadchodzące zmiany);
+        console.log('Metoda shouldComponentUpdate zwróci wartość true, to natychmiast zostanie wywołana kolejna metoda - componentWillUpdate. Powinna zostać wywoływana tylko do przygotowania na nadchodzące zmiany');
     },
 
     componentDidUpdate: function() {
-        console.log(Jako ostatnia zaraz po przerysowaniu komponentu wywołuje się metoda componentDidUpdate - w niej możemy wykonać np. jakieś manipulacje DOM (analogicznie do metody componentDidMount).);
+        console.log('Jako ostatnia zaraz po przerysowaniu komponentu wywołuje się metoda componentDidUpdate - w niej możemy wykonać np. jakieś manipulacje DOM (analogicznie do metody componentDidMount).');
 
     },
 
     componentWillUnmount: function() {
-        console.log(Zanim pozbędziemy się komponentu może się zdarzyć, że będziemy musieli załatwić jeszcze pewne sprawy, posprzątać. Do tego celu służy metoda componentWillUnmount, w której możemy wykonywać wszystkie rzeczy związane z odpinaniem timerów czy nasłuchiwania zdarzeń na elementach DOM.);
+        console.log('Zanim pozbędziemy się komponentu może się zdarzyć, że będziemy musieli załatwić jeszcze pewne sprawy, posprzątać. Do tego celu służy metoda componentWillUnmount, w której możemy wykonywać wszystkie rzeczy związane z odpinaniem timerów czy nasłuchiwania zdarzeń na elementach DOM.');
 
     },
     
